@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operating System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="motive">
+      <h2>
+        OPERATING SYSTEM CONCEPTS <br />
+        <br />
+        <span> TENTH EDITION📖.</span>
+      </h2>
+    </div>
+    <div class="instruction">Flip the page to read it</div>
+    <div class="book">
+      
+      <div class="page cover-front" onclick="movePage(this, 1)">
+        <img style="right: 25px;position: relative;bottom:20px; height: 610px; width: 385px;" src="./OS.jpg" alt="OS">
+        <div class="hat"><i class="fab fa-pied-piper-hat"></i></div>
+      </div>
+
+      <div class="page cover-front" onclick="movePage(this, 2)"></div>
+      <div class="page text-page" onclick="movePage(this, 3)">
+        <p>
+          <br><br>
+          <p style="font-style: oblique;">Preface</p>
+Operating systems are an essential part of any computer system. Similarly, a
+course on operating systems is an essential part of any computer science education. This field is undergoing rapid change, as computers are now prevalent
+in virtually every arena of day-to-day life— from embedded devices in automobiles through the most sophisticated planning tools for governments and
+multinational firms. Yet the fundamental concepts remain fairly clear, and it is
+on these that we base this book. <br> 
+We wrote this book as a text for an introductory course in operating systems at the junior or senior undergraduate level or at the first-year graduate
+level. We hope that practitioners will also find it useful. It provides a clear
+description of the concepts that underlie operating systems. As prerequisites,
+we assume that the reader is familiar with basic data structures, computer
+organization, and a high-level language, such as C or Java. The hardware topics
+required for an understanding of operating systems are covered in Chapter 1.
+      </div>
+      <div class="page text-page" onclick="movePage(this, 4)">
+        <p>In that chapter, we also include an overview of the fundamental data structures
+          that are prevalent in most operating systems.For code examples, we use predominantly C, as well as a significant amount of Java, but the reader can still
+          understand the algorithms without a thorough knowledge of these languages.Concepts are presented using intuitive descriptions. Important theoretical
+results are covered, but formal proofs are largely omitted. The bibliographical
+notes at the end of each chapter contain pointers to research papers in which
+results were first presented and proved, as well as references to recent material
+for further reading. In place of proofs, figures and examples are used to suggest
+why we should expect the result in question to be true. <br>
+The fundamental concepts and algorithms covered in the book are often
+based on those used in both open-source and commercial operating systems.
+Our aim is to present these concepts and algorithms in a general setting that
+is not tied to one particular operating system. However, we present a large
+number of examples that pertain to the most popular and the most innovative
+operating systems, including Linux, Microsoft Windows, Apple macOS (the
+original name, OS X, was changed in 2016 to match the naming scheme of other
+Apple products), and Solaris. We also include examples of both Android and
+iOS, currently the two dominant mobile operating systems.
+      </div>
+      <div class="page text-page" onclick="movePage(this, 5)">
+        <p>The organization of the text reflects our many years of teaching courses
+          on operating systems.Consideration was also given to the feedback provided
+          by the reviewers of the text, along with the many comments and suggestions
+          we received from readers of our previous editions and from our current and
+          former students.
+          This Tenth Edition also reflects most of the curriculum guidelines in the operating-systems area in Computer Science Curricula 2013, the most
+recent curriculum guidelines for undergraduate degree programs in computer
+science published by the IEEE Computing Society and the Association for Computing Machinery (ACM). <br>
+<p style="color: aqua;font-size: 10xp;">What’s New in This Edition </p>
+For the Tenth Edition, we focused on revisions and enhancements aimed at
+lowering costs to the students, better engaging them in the learning process,
+and providing increased support for instructors. <br>
+According to the publishing industry’s most trusted market research firm,
+Outsell, 2015 represented a turning point in text usage: for the first time,
+student preference for digital learning materials was higher than for print, and
+the increase in preference for digital has been accelerating since.
+While print remains important for many students as a pedagogical tool
+      </div>
+      
+      <div class="page text-page" onclick="movePage(this, 6)">
+        <p>Tenth Edition is being delivered in forms that emphasize support for learning
+          from digital materials. All forms we are providing dramatically reduce the cost
+          to students compared to the Ninth Edition.
+          These forms are:
+          • Stand-alone e-text now with significan enhancements. The e-text format
+for the Tenth Edition adds exercises with solutions at the ends of main
+sections, hide/reveal definitions for key terms, and a number of animated
+figures.
+          It also includes additional “Practice Exercises” with solutions for
+          each chapter, extra exercises, programming problems and projects, “Further Reading” sections, a complete glossary, and four appendices for legacy
+          operating systems. <br>
+          Major Changes
+The Tenth Edition update encompasses much more material than previous
+updates, in terms of both content and new supporting material. Next, we
+provide a brief outline of the major content changes in each chapter:
+• Chapter 1: Introduction includes updated coverage of multicore systems,
+as well as new coverage of NUMA systems and Hadoop clusters. Old
+material has been updated, and new motivation has been added for the
+study of operating systems.
+
+        </p>
+      </div>
+      <div class="page text-page" onclick="movePage(this, 7)"">
+        <p>• Chapter 2: Operating-System Structures provides a significantly revised
+          discussion of the design and implementation of operating systems. We
+          have updated our treatment of Android and iOS and have revised our
+          coverage of the system boot process with a focus on GRUB for Linux
+systems. New coverage of the Windows subsystem for Linux is included
+as well. We have added new sections on linkers and loaders, and we now
+discuss why applications are often operating-system specific. Finally, we
+have added a discussion of the BCC debugging toolset. <br>
+          • Chapter 3: Processes simplifies the discussion of scheduling so that it
+now includes only CPU scheduling issues. New coverage describes the
+memory layout of a C program, the Android process hierarchy, Mach
+message passing, and Android RPCs. We have also replaced coverage of
+the traditional UNIX/Linux init process with coverage of systemd.
+• Chapter 4: Threads and Concurrency (previously Threads) increases the
+coverage of support for concurrent and parallel programming at the API
+and library level.
+        </p>
+      </div>
+
+      <div class="page text-page" onclick="movePage(this, 8)">
+        <p> We have revised the section on Java threads so that it
+          now includes futures and have updated the coverage of Apple’s Grand
+          Central Dispatch so that it now includes Swift. New sections discuss forkjoin parallelism using the fork-join framework in Java, as well as Intel
+          thread building blocks. <br>
+          • Chapter 5: CPU Scheduling (previously Chapter 6) revises the coverage of
+multilevel queue and multicore processing scheduling. We have integrated
+coverage of NUMA-aware scheduling issues throughout, including how
+this scheduling affects load balancing. We also discuss related modifications to the Linux CFS scheduler. New coverage combines discussions of
+round-robin and priority scheduling, heterogeneous multiprocessing, and
+Windows 10 scheduling. <br>
+          • Chapter 6: Synchronization Tools (previously part of Chapter 5, Process
+Synchronization) focuses on various tools for synchronizing processes.
+Significant new coverage discusses architectural issues such as instruction
+reordering and delayed writes to buffers. The chapter also introduces lockfree algorithms using compare-and-swap (CAS) instructions. No specific
+APIs are presented; rather, the chapter provides an introduction to race
+conditions and general tools that can be used to prevent data races. Details
+include new coverage of memory models, memory barriers, and liveness
+issues.
+        </p>
+      </div>
+      <div class="page text-page" onclick="movePage(this, 9)">
+        <p>• Chapter 7: Synchronization Examples (previously part of Chapter 5,
+          Process Synchronization) <br>
+          • Chapter 8: Deadlocks (previously Chapter 7) provides minor updates,
+including a new section on livelock and a discussion of deadlock as an
+example of a liveness hazard. The chapter includes new coverage of the
+Linux lockdep and the BCC deadlock detector tools, as well as coverage
+of Java deadlock detection using thread dumps. <br>
+          • Chapter 9: Main Memory (previously Chapter 8) includes several revisions that bring the chapter up to date with respect to memory management on modern computer systems. We have added new coverage of the
+ARMv8 64-bit architecture, updated the coverage of dynamic link libraries,
+and changed swapping coverage so that it now focuses on swapping pages
+rather than processes. We have also eliminated coverage of segmentation.
+• Chapter 10: Virtual Memory (previously Chapter 9) contains several revisions, including updated coverage of memory allocation on NUMAsystems
+and global allocation using a free-frame list. New coverage includes compressed memory, major/minor page faults, and memory management in
+Linux and Windows 10.
+        </p>
+      </div>
+      <div style="background-color: white;" class="page text-page" onclick="movePage(this, 10)">
+        <p>• Chapter 11: Mass-Storage Structure (previously Chapter 10) adds coverage of nonvolatile memory devices, such as flash and solid-state disks.
+          Hard-drive scheduling is simplified to show only currently used algorithms. Also included are a new section on cloud storage, updated RAID
+          coverage, and a new discussion of object storage. <br>          
+          • Chapter 12, I/O (previously Chapter 13) updates the coverage of
+technologies and performance numbers, expands the coverage of
+synchronous/asynchronous and blocking/nonblocking I/O, and adds a
+section on vectored I/O. It also expands coverage of power management
+for mobile operating systems. <br>
+          • Chapter 13: File-System Interface (previously Chapter 11) has been
+updated with information about current technologies.
+        </p>
+      </div>
+      <div style="background-color: white;" class="page text-page" onclick="movePage(this, 11)">
+        <p> In particular, the
+          coverage of directory structures has been improved, and the coverage of
+          protection has been updated. The memory-mapped files section has been
+          expanded, and a Windows API example has been added to the discussion
+          of shared memory. The ordering of topics is refactored in Chapter 13 and
+          14. <br>
+          • Chapter 14: File-System Implementation (previously Chapter 12) has
+been updated with coverage of current technologies. The chapter now
+includes discussions of TRIM and the Apple File System. In addition, the
+discussion of performance has been updated, and the coverage of journaling has been expanded.<br>
+• Chapter 15: File System Internals is new and contains updated information from previous Chapters 11 and 12. <br>
+          • Chapter 16: Security (previously Chapter 15) now precedes the protection chapter. It includes revised and updated terms for current security
+threats and solutions, including ransomware and remote access tools. The
+principle of least privilege is emphasized.
+        </p>
+      </div>
+      <div style="background-color: white;" class="page text-page" onclick="movePage(this, 12)">
+        <p> Coverage of code-injection vulnerabilities and attacks has been revised and now includes code samples.
+          Discussion of encryption technologies has been updated to focus on the
+          technologies currently used. Coverage of authentication (by passwords
+          and other methods) has been updated and expanded with helpful hints.
+          Additions include a discussion of address-space layout randomization and
+          a new summary of security defenses. The Windows 7 example has been
+          updated to Windows 10. <br>
+          • Chapter 17: Protection (previously Chapter 14) contains major changes.
+The discussion of protection rings and layers has been updated and now
+refers to the Bell–LaPadula model and explores the ARM model of TrustZones and Secure Monitor Calls. Coverage of the need-to-know principle
+has been expanded, as has coverage of mandatory access control. Subsections on Linux capabilities, Darwin entitlements, security integrity protection, system-call filtering, sandboxing, and code signing have been added.
+Coverage of run-time-based enforcement in Java has also been added,
+including the stack inspection technique.
+        </p>
+      </div>
+      <div style="background-color: white;" class=" page">
+      <p style="text-align: center;font-size: larger;font-weight: bold;">
+        END OF SAMPLE
+      </p></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+    </div>
+
+    <script>
+      document.getElementById("botao1").addEventListener("click", function () {
+        alert("Thank You For Reading");
+      });
+    </script>
+    <script src="./OS.js"></script>
+  </body>
+</html>
