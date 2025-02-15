@@ -1,4 +1,4 @@
-# Operating-System-Book-Sample
+# Operating-System-Book-Mini-Project
 Using HTML, CSS & Javascript
 
 Link - 
